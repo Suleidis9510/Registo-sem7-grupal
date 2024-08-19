@@ -18,6 +18,7 @@
         <div class="col">
           <h1 class="mb-3">Registro</h1>
           <hr class="my-4">
+          <form id="registroForm">
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="nombre" class="form-label">Nombre</label>
@@ -48,12 +49,14 @@
               <input type="checkbox" class="form-check-input" id="terminos">
               <label class="form-check-label" for="terminos">Acepto los términos y condiciones del servicio.</label>
             </div>
-
-            <button class="btn btn-primary" type="button" id="regBtn">Registrarme</button>
+         
+            <button class="btn btn-primary" type="submit" id="regBtn">Registrarme</button>
 
 
           </div>
+        
         </div>
+           </form>
       </div>
 
     </main>
@@ -66,15 +69,17 @@
     </footer>
   </div>
 
+
   <div class="alert alert-success alert-dismissible fade" role="alert" id="alert-success">
     <p>Datos guardados correctamente</p>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
+    <button type="button" class="btn-close" onclick="hideAlert('alert-success')" aria-label="Close"></button>
+</div>
 
-  <div class="alert alert-danger alert-dismissible fade" role="alert" id="alert-danger">
+<div class="alert alert-danger alert-dismissible fade" role="alert" id="alert-danger">
     <p>Los datos ingresados no cumplen con los requisitos solicitados</p>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
+    <button type="button" class="btn-close" onclick="hideAlert('alert-danger')" aria-label="Close"></button>
+</div>
+
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/validacion.js"></script>
